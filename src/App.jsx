@@ -4,6 +4,7 @@ import Landing from "./pages/Landing";
 import Auth from "./pages/Auth";
 import RoomGate from "./pages/RoomGate";
 import Room from "./pages/Room";
+import Dashboard from "./pages/Dashboard";
 
 const App = () => {
   useEffect(() => {
@@ -24,6 +25,8 @@ const App = () => {
       <Route path="/auth" element={<Auth />} />
       <Route path="/room-gate" element={<RoomGate />} />
       <Route path="/room/:roomId" element={<Room />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+
     </Routes>
   );
 };
