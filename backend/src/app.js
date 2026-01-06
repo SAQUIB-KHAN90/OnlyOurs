@@ -25,6 +25,15 @@ app.use("/api/chat", require("./routes/chat.routes"));
 app.use("/api/memories", require("./routes/memories.routes"));
 app.use("/api/secrets", require("./routes/secrets.routes"));
 app.use("/api/rage", require("./routes/rage.routes"));
+app.use("/api/songs", require("./routes/songs.routes"));
+app.use("/api/videos", require("./routes/videos.routes"));
+app.use("/api/pets", require("./routes/pets.routes"));
+app.use("/api/milestones", require("./routes/milestones.routes"));
+app.use("/api/goals", require("./routes/goals.routes"));
+app.use("/api/reminders", require("./routes/reminders.routes"));
+app.use("/api/poetry", require("./routes/poetry.routes"));
+
+
 
 
 
