@@ -6,7 +6,8 @@ const MilestoneCard = ({ milestone }) => {
 
       <div
         className="bg-white/70 border border-borderColor rounded-2xl p-6
-        transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+soft-transition hover:shadow-lg hover:-translate-y-[2px]
+active:scale-[0.98]"
       >
         {/* Optional Image */}
         {milestone.image && (

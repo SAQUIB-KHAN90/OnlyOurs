@@ -1,7 +1,11 @@
 const MemoryCard = ({ memory }) => {
   return (
-    <div className="bg-white/70 border border-borderColor rounded-2xl overflow-hidden
-    transition-all duration-300 ease-in-out hover:shadow-lg hover:-translate-y-1">
+    <div className="className=
+bg-white/70 border border-borderColor rounded-2xl p-6
+soft-transition hover:shadow-lg hover:-translate-y-[2px]
+active:scale-[0.98]
+"
+>
 
       {/* Optional Image */}
       {memory.image && (

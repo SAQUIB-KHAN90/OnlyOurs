@@ -7,6 +7,17 @@ import Secrets from "./secrets/Secrets";
 import Songs from "./songs/Songs";
 import Videos from "./videos/Videos";
 import Milestones from "./milestones/Milestones";
+import Goals from "./goals/Goals";
+import Poetry from "./poetry/Poetry";
+import Pets from "./pets/Pets";
+import Reminders from "./reminders/Reminders";
+import Customize from "./customize/Customize";
+import Settings from "./settings/Settings";
+
+
+
+
+
 
 
 const MainContent = ({ activeSection, setSidebarOpen }) => {
@@ -32,10 +43,10 @@ const MainContent = ({ activeSection, setSidebarOpen }) => {
       </div>
 
       <div
-        className={`transition-all duration-300 ease-in-out
-        ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"}`}
+        className={`transition-all duration-250 ease-in-out
+        ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1"}`}
       >
-        {activeSection === "home" && <Home />}
+   {activeSection === "home" && <Home />}
 {activeSection === "chat" && <Chat />}
 {activeSection === "memories" && <Memories />}
 {activeSection === "rage" && <RageRoom />}
@@ -43,8 +54,17 @@ const MainContent = ({ activeSection, setSidebarOpen }) => {
 {activeSection === "songs" && <Songs />}
 {activeSection === "videos" && <Videos />}
 {activeSection === "milestones" && <Milestones />}
+{activeSection === "goals" && <Goals />}
+{activeSection === "poetry" && <Poetry />}
+{activeSection === "pets" && <Pets />}
+{activeSection === "reminders" && <Reminders />}
+{activeSection === "customize" && <Customize />}
+{activeSection === "settings" && <Settings />}
 
-{!["home","chat","memories","rage","secrets","songs","videos","milestones"].includes(activeSection) && (
+{![
+  "home","chat","memories","rage","secrets","songs","videos",
+  "milestones","goals","poetry","pets","reminders","customize","settings"
+].includes(activeSection) && (
   <div>
     <h2 className="font-heading text-3xl text-primary capitalize">
       {activeSection}
@@ -54,6 +74,9 @@ const MainContent = ({ activeSection, setSidebarOpen }) => {
     </p>
   </div>
 )}
+
+
+
 
       </div>
     </main>
