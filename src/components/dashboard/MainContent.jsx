@@ -4,7 +4,9 @@ import Chat from "./chat/chat";
 import Memories from "./memories/Memories";
 import RageRoom from "./rage/RageRoom";
 import Secrets from "./secrets/Secrets";
-
+import Songs from "./songs/Songs";
+import Videos from "./videos/Videos";
+import Milestones from "./milestones/Milestones";
 
 
 const MainContent = ({ activeSection, setSidebarOpen }) => {
@@ -20,10 +22,7 @@ const MainContent = ({ activeSection, setSidebarOpen }) => {
     <main className="flex-1 px-6 py-4 overflow-y-auto">
       {/* MOBILE HEADER */}
       <div className="flex items-center gap-4 mb-4 lg:hidden">
-        <button
-          onClick={() => setSidebarOpen(true)}
-          className="text-2xl"
-        >
+        <button onClick={() => setSidebarOpen(true)} className="text-2xl">
           ☰
         </button>
 
@@ -41,8 +40,11 @@ const MainContent = ({ activeSection, setSidebarOpen }) => {
 {activeSection === "memories" && <Memories />}
 {activeSection === "rage" && <RageRoom />}
 {activeSection === "secrets" && <Secrets />}
+{activeSection === "songs" && <Songs />}
+{activeSection === "videos" && <Videos />}
+{activeSection === "milestones" && <Milestones />}
 
-{!["home", "chat", "memories", "rage", "secrets"].includes(activeSection) && (
+{!["home","chat","memories","rage","secrets","songs","videos","milestones"].includes(activeSection) && (
   <div>
     <h2 className="font-heading text-3xl text-primary capitalize">
       {activeSection}
@@ -52,9 +54,6 @@ const MainContent = ({ activeSection, setSidebarOpen }) => {
     </p>
   </div>
 )}
-
-
-
 
       </div>
     </main>
