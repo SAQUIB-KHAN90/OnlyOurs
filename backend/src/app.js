@@ -19,6 +19,14 @@ app.use(cookieParser());
 
 /* Routes */
 app.use("/api/health", require("./routes/health.routes"));
+app.use("/api/auth", require("./routes/auth.routes"));
+app.use("/api/room", require("./routes/room.routes"));
+app.use("/api/chat", require("./routes/chat.routes"));
+app.use("/api/memories", require("./routes/memories.routes"));
+app.use("/api/secrets", require("./routes/secrets.routes"));
+app.use("/api/rage", require("./routes/rage.routes"));
+
+
 
 /* Error Handler */
 app.use(errorHandler);
